@@ -1,0 +1,72 @@
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+
+}
+
+span:nth-child(1){
+    background-color: red;
+    animation-delay: 0.5s;
+}
+
+span:nth-child(2){
+    background-color: green;
+    animation-delay: 1s;
+}
+span:nth-child(3){
+    background-color: blue;
+    animation-delay: 1.5s;
+}
+span{
+    display: flex;
+    width: 20px;
+    background-color: blue;
+    height: 20px;
+    margin: 10px;
+    border-radius: 50%;
+    animation: animate ease  2s infinite;
+    position: sticky;
+}
+
+span:nth-child(1){
+    background-color: red;
+}
+
+span:nth-child(2){
+    background-color: green;
+    position: static;
+}
+
+
+
+
+@keyframes animate{
+   0%,100%{
+    scale: 1;
+   }
+   50%{
+    transform: scale(1.5)
+   }
+   
+}
+
+.before{
+    font-size: 2rem;
+}
+.before::after{
+    content: '';
+    width: 0px;
+    height: 3px;
+    display: block;
+    transition: 0.3s ease;
+    background-color: green;
+}
+
+
+.before:hover::after{
+    width: 50px;
+
+}
