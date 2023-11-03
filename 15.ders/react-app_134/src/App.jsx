@@ -1,17 +1,25 @@
-import Button from "./components/button"
-import Input from "./components/input"
-
+// import Button from "./components/button"
+import Button from "./components/button";
+import Cards from "./components/cards";
+// import Input from "./components/input"
 
 function App() {
-
   return (
     <>
-    <Button size={30} width={240} title='click'/>
-    <Button size={12} width={120} title={'add'}/>
-
-    <Input/>
+      <div
+        className="app"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          width: "100%",
+        }}
+      >
+        <Cards />
+      </div>
+        <Button />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
